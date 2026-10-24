@@ -68,8 +68,8 @@ Le détail de ce que couvrent les tests est dans `tests/README.md`.
 1. **Issues :** chaque bogue ou tâche est d'abord décrit dans une issue
    GitHub (description, étapes pour reproduire, test qui échoue) et assigné
    à un membre de l'équipe.
-2. **Branches :** on ne travaille pas directement sur `main`. Pour chaque
-   issue, créer une branche à partir de `main` :
+2. **Branches :** chaque correction de bogue se fait sur sa propre branche.
+   Pour chaque issue, créer une branche à partir de `main` :
    ```bash
    git checkout main
    git pull
