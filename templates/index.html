@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<!--
+   Calculator page rendered by app.py (index route).
+   Buttons build the expression in the display field on the client side;
+   "=" submits it to the server, which renders this page again with the result.
+-->
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -10,7 +15,11 @@
 <div class="calculator">
    <h1>Flask Calculator</h1>
    <form method="POST">
+      <!-- Read-only so the expression can only be built with the buttons.
+           Its name "display" is the form field app.py reads. -->
       <input type="text" name="display" id="display" value="{{ result }}" readonly>
+
+      <!-- 4x4 grid: digits, clear, equals and the four operators. -->
 
       <div class="buttons">
          <button type="button" class="btn" onclick="appendToDisplay('1')">1</button>
@@ -37,11 +46,18 @@
 </div>
 
 <script>
+   /**
+    * Append a character to the end of the display.
+    * @param {string} value - Digit or operator to append.
+    */
    function appendToDisplay(value) {
       const display = document.getElementById('display');
       display.value += value;
    }
 
+   /**
+    * Clear the display (client side only, nothing is sent to the server).
+    */
    function clearDisplay() {
       document.getElementById('display').value = '';
    }

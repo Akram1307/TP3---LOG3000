@@ -1,3 +1,6 @@
+/* Styles for the calculator page (templates/index.html). */
+
+/* Center the calculator on the page. */
 body {
    font-family: Arial, sans-serif;
    background-color: #f0f0f0;
@@ -37,6 +40,7 @@ h1 {
    color: #fff;
 }
 
+/* 4 columns of buttons, like a calculator keypad. */
 .buttons {
    display: grid;
    grid-template-columns: repeat(4, 1fr);
@@ -59,6 +63,7 @@ h1 {
    background-color: #555;
 }
 
+/* Operators and "=" in orange to tell them apart from digits. */
 .operator {
    background-color: #ff9500;
 }
@@ -67,6 +72,7 @@ h1 {
    background-color: #e68a00;
 }
 
+/* Darker color while pressed. */
 .btn:active {
    background-color: #444;
 }
