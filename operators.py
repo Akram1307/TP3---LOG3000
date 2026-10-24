@@ -39,7 +39,7 @@ def multiply(a,b):
     Returns:
         float: a * b.
     """
-    return a ** b
+    return a * b
 
 def divide(a,b):
     """Return the quotient of two numbers.
